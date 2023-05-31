@@ -4,7 +4,6 @@ import tflearn
 import numpy as np
 import random
 import json
-import pickle
 import nltk
 import openai
 openai.api_key = "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"
