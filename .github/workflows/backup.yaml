@@ -2,7 +2,7 @@ name: Backup Firestore
 
 on:
   schedule:
-    - cron:  '* * * * *'
+    - cron:  '0 0 * * *'
 
 env:
   PROJECT_ID: hpe-chatbot
@@ -19,5 +19,5 @@ jobs:
     - run: gcloud config set account biswajeetraut382@gmail.com
     - run: gcloud info
     - run: gcloud config set project $PROJECT_ID
-    - run: gcloud auth activate-service-account backupaccount@hpe-chatbot.iam.gserviceaccount.com --key-file=secrets.GCP_SA_KEY
+    - run: gcloud auth activate-service-account backupaccount@hpe-chatbot.iam.gserviceaccount.com --key-file=
     - run: gcloud firestore export $BUCKET
