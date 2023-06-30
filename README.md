@@ -116,34 +116,6 @@ Here is a step-by-step guide on how to use the Chat Application:
 
 7. Delete a chat: If you wish to delete a chat, click on the "View Chats" button in the welcome section of the chat window. This will open the sidebar, where you can select and delete individual chat conversations.
   
-## Results
-
-### Login Page
-![Login Page](https://i.ibb.co/3zPR6ZP/Screenshot-2023-05-23-at-9-29-06-AM.png)
-
-The login page is an essential component of the application and serves as the initial point of entry for users. It is accessed through the '/' and '/login' paths defined in the React Router configuration. The primary purpose of the login page is to allow users to authenticate themselves and gain access to the application's features and resources.
-
-To provide a seamless and secure login experience, the page leverages Google account authentication via OAuth Firebase Authentication provider. This integration enables users to log in using their Google credentials, ensuring a streamlined login process.
-
-Once a user successfully logs in with their Google account, they are redirected to the ChatWindow page, where they can engage in conversations. To facilitate user management and access to user-specific data throughout the application, the login process includes dispatching user details to the Redux global state using reducer actions. This allows other components to utilize the user's information through the useSelector hooks, granting access to personalized features and data.
-
-By implementing this login functionality, the application ensures that only authorized users can access its resources and benefit from the interactive chat experience. The combination of Google account authentication, Redux state management, and React Router integration enhances both security and usability, providing a seamless and personalized user experience.
-  
-### Home Page 
-![Home Page](https://i.ibb.co/3zPR6ZP/Screenshot-2023-05-23-at-9-29-06-AM.png)
-  
-The home page of the website consists of a sidebar and a chat window. When the path is set to '/id/chat', the welcome user page is displayed with two options: New Chat and View Chats. Initially, the sidebar window is closed, but when the user clicks on the View Chats button, it animates and opens the sidebar. The sidebar is responsive and contains four sections.
-
-User Details Section: This section displays the user's profile photo, extracted from their Google account, along with their profile name and email address.
-
-Chat Section: In this section, the names of the chats are displayed. The chats are fetched from Firebase, and whenever there is a change in the chat list (e.g., adding or deleting a chat), the component is immediately updated using the useEffect hook. The chat list is displayed in real-time, reflecting any changes made to the chats.
-
-Add Chat Option: This section allows users to add new chats. However, there is a chat limit of 10, and if this limit is exceeded, a prompt appears indicating that the last chat will be deleted. If the user doesn't want to delete the last chat, they need to delete another chat before adding a new one.
-
-Mode Change and Logout Options Section: This section provides options to change the mode (presumably referring to a dark mode or light mode) and logout from the application.
-
-These sections enhance the user experience by providing easy access to chat functionality, real-time updates, and convenient options for managing chats, user details, and application settings.
-  
 ## Technologies
 
 The Chat Application was developed using the following technologies and resources:
